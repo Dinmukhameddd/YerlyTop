@@ -27,9 +27,9 @@ input::placeholder{color:#98A2B3;}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms !important;animation-iteration-count:1 !important;}}
 </style>
 </helmet>
-<div style="min-height:100vh;display:flex;">
+<div style="height:100vh;display:flex;overflow:hidden;">
 
-  <div style="flex:1 1 520px;min-width:min(100%,320px);display:flex;flex-direction:column;background:#FFFFFF;">
+  <div style="flex:1 1 520px;min-width:min(100%,320px);display:flex;flex-direction:column;background:#FFFFFF;min-height:0;">
     <header style="flex:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px clamp(24px,5vw,48px);">
       <div style="display:flex;align-items:center;gap:10px;">
         <img src="assets/logo-mark.svg" alt="Yerlytop" width="32" height="32" style="display:block;border-radius:8px;">
@@ -41,7 +41,7 @@ input::placeholder{color:#98A2B3;}
       </a>
     </header>
 
-    <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:16px clamp(24px,5vw,48px) 48px;">
+    <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:16px clamp(24px,5vw,48px) 48px;min-height:0;overflow-y:auto;">
       <div style="width:100%;max-width:400px;animation:authRise 500ms cubic-bezier(.2,.8,.2,1) both;">
 
         <div style="display:flex;position:relative;background:#F2F4F7;border-radius:10px;padding:4px;margin-bottom:28px;">
@@ -109,11 +109,11 @@ input::placeholder{color:#98A2B3;}
     </div>
   </div>
 
-  <aside class="auth-aside" style="flex:1 1 500px;position:relative;overflow:hidden;background:linear-gradient(150deg,#1677FF 0%,#0958D9 60%,#0A3FA8 100%);display:flex;flex-direction:column;justify-content:center;gap:36px;padding:clamp(48px,5.5vw,72px);color:#FFFFFF;">
+  <aside class="auth-aside" style="flex:1 1 500px;position:relative;overflow:hidden;background:linear-gradient(150deg,#1677FF 0%,#0958D9 60%,#0A3FA8 100%);display:flex;flex-direction:column;justify-content:center;gap:48px;padding:clamp(48px,5.5vw,72px);color:#FFFFFF;">
     <div style="position:absolute;top:-140px;right:-120px;width:380px;height:380px;border-radius:999px;background:rgba(255,255,255,.09);"></div>
     <div style="position:absolute;bottom:-180px;left:-120px;width:440px;height:440px;border-radius:999px;background:rgba(255,255,255,.06);"></div>
 
-    <div style="position:relative;max-width:440px;">
+    <div style="position:relative;max-width:440px;animation:authRise 500ms cubic-bezier(.2,.8,.2,1) both;">
       <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:999px;margin-bottom:22px;font-size:13px;font-weight:600;">
         <span style="width:7px;height:7px;border-radius:999px;background:#52C41A;animation:ringPulse 2.4s ease-out infinite;"></span>
         Live rankings, updated daily
@@ -123,7 +123,7 @@ input::placeholder{color:#98A2B3;}
     </div>
 
     <div style="position:relative;perspective:1200px;">
-      <div style="animation:cardFloat 6s ease-in-out infinite;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:16px;backdrop-filter:blur(8px);box-shadow:0 20px 50px rgba(10,24,64,.35);">
+      <div style="animation:authRise 550ms cubic-bezier(.2,.8,.2,1) 180ms both,cardFloat 6s ease-in-out 900ms infinite;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:16px;backdrop-filter:blur(8px);box-shadow:0 20px 50px rgba(10,24,64,.35);">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;padding:0 4px;">
           <span style="font-size:13px;font-weight:600;color:rgba(255,255,255,.9);">Best CRM software · 2026</span>
           <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,.7);font-family:'JetBrains Mono',monospace;">24 ranked</span>
@@ -147,36 +147,12 @@ input::placeholder{color:#98A2B3;}
         </sc-for>
       </div>
 
-      <div style="position:absolute;top:-16px;right:-14px;display:flex;align-items:center;gap:6px;background:#FFFFFF;color:#0958D9;border-radius:999px;padding:7px 13px 7px 10px;font-size:12px;font-weight:700;box-shadow:0 10px 24px rgba(10,24,64,.30);background-image:linear-gradient(100deg,#FFFFFF 0%,#FFFFFF 40%,#E6F4FF 50%,#FFFFFF 60%,#FFFFFF 100%);background-size:220% 100%;animation:shine 3.6s ease-in-out infinite;">
+      <div style="position:absolute;top:-16px;right:-14px;display:flex;align-items:center;gap:6px;background:#FFFFFF;color:#0958D9;border-radius:999px;padding:7px 13px 7px 10px;font-size:12px;font-weight:700;box-shadow:0 10px 24px rgba(10,24,64,.30);background-image:linear-gradient(100deg,#FFFFFF 0%,#FFFFFF 40%,#E6F4FF 50%,#FFFFFF 60%,#FFFFFF 100%);background-size:220% 100%;animation:authRise 400ms cubic-bezier(.2,.8,.2,1) 650ms both,shine 3.6s ease-in-out 1050ms infinite;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="#FAAD14" stroke="none"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"></path></svg>
         Editor's choice
       </div>
     </div>
 
-    <div style="position:relative;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:20px;backdrop-filter:blur(8px);">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
-        <div style="display:flex;gap:2px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FAAD14" stroke="none"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"></path></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FAAD14" stroke="none"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"></path></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FAAD14" stroke="none"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"></path></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FAAD14" stroke="none"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"></path></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#FAAD14" stroke="none"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"></path></svg>
-        </div>
-        <span style="font-size:13px;font-weight:600;color:rgba(255,255,255,.9);">4.9 average · 3,200+ reviews</span>
-      </div>
-      <p style="font-size:15px;line-height:1.55;color:#FFFFFF;margin:0 0 16px;font-weight:500;">“Yerlytop is the first place my team checks before any purchase. The rankings are transparent and genuinely save us hours.”</p>
-      <div style="display:flex;align-items:center;gap:12px;">
-        <span style="width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#FFFFFF;">MK</span>
-        <div style="flex:1;">
-          <div style="font-size:14px;font-weight:600;color:#FFFFFF;">Maria Kessler</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.72);">Head of Procurement, Northwind</div>
-        </div>
-        <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:#FFFFFF;background:rgba(82,196,26,.22);border:1px solid rgba(82,196,26,.45);border-radius:999px;padding:4px 9px;">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B7F5A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Verified
-        </span>
-      </div>
-    </div>
   </aside>
 
 </div>
